@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+:root {
+    --background-Color: #516dff;
+
+}
+
+image {
+    max-width: 100%;
+}
+
+body {
+    background-color: var(--background-Color);
+    font-family: 'Press Start 2P';
+    height: 100vh;
+    color: white;
+}
+
+.container {
+    max-width: 1300px;
+    margin: auto;
+
+
+}
+
+
+
+.start-btn {
+    padding: 18px;
+    font-family: 'Press Start 2P';
+
+    border: 0;
+    color: var(--background-Color);
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    width: fit-content;
+}
+
+
+button:hover {
+    background: wheat;
+    transform: scale(.9);
+}
+
+
+.screens {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: margin 0.75s linear;
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.screen-up {
+    margin-top: -100vh;
+}
+
+.boxes {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.box img {
+    width: 100px;
+    height: 100px;
+}
+
+.insects{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    transform: translate(-50%, -50%) scale(1);
+    cursor: pointer;
+    width: 100px;
+ 
+    height: 100px;
+    transition: transform 0.3s ease-out;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    cursor: pointer;
+    border: 4px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid white;
+
+}
+
+.insects-catched {
+    transition: transform .3s ease-out;
+}
+
+.insects img {
+    width: 100%;
+    height: 100%;
+}
+
+.selected {
+    background: white;
+    color: var(--background-Color);
+}
+
+.box:hover {
+    background: white;
+    color: var(--background-Color);
+}
+
+.main-section {
+    position: relative;
+    /* width: 100%;
+    height: 100%; */
+
+
+}
+
+#time, #score {
+    top: 20px;
+    position: absolute;
+}
+
+#time {
+    left: 30px;
+}
+
+#score {
+    right: 30px;
+}
+
+#annoying_message {
+    line-height: 1.6;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+    transform: translate(-50%, -150%);
+    transition: transorm .4s ease-in;
+}
+
+#annoying_message.visible {
+    transform: translate(-50%, 100%);
+    opacity: 1;
+    transition: 1s;
+}
